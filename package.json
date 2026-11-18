@@ -1,0 +1,28 @@
+{
+  "name": "pyq-brain",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply pyq-brain --local",
+    "db:migrate:remote": "wrangler d1 migrations apply pyq-brain --remote",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "notes:ocr": "python3 -I scripts/notes_ocr.py",
+    "notes:import:local": "wrangler d1 execute pyq-brain --local --file data/notes.sql",
+    "notes:import:remote": "wrangler d1 execute pyq-brain --remote --file data/notes.sql",
+    "ink": "node scripts/ink.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.13.17",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261110.1",
+    "htmx.org": "^2.0.11",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0",
+    "wrangler": "^4.160.0"
+  }
+}

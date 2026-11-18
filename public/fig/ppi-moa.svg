@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 300" width="470" height="300" role="img" aria-label="Proton pump inhibitors block the H+/K+ ATPase in the parietal cell, the final step of acid secretion">
+<style>:root{--i:#2a2420;--a:#c2412d;--b:#2c4f9e;--p:#f8f5ee}@media (prefers-color-scheme:dark){:root{--i:#ece4d6;--a:#ff917c;--b:#9fb8f2;--p:#26231f}}
+text{font-family:"Helvetica Neue",Arial,sans-serif;fill:var(--i);font-size:12.5px}.b{font-weight:700}.y{fill:var(--b)}.r{fill:var(--a)}.s{font-size:11px}
+.l{stroke:var(--i);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}</style>
+<defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="var(--i)" stroke-width="1.6"/></marker>
+<marker id="hr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="var(--a)" stroke-width="1.6"/></marker></defs>
+<text x="6" y="22" class="s">Blood side</text><text x="466" y="22" text-anchor="end" class="s">Stomach lumen</text>
+<rect x="120" y="44" width="230" height="200" rx="24" class="l" stroke-width="2.2"/>
+<text x="235" y="36" text-anchor="middle" class="b">PARIETAL CELL</text>
+<!-- receptors -->
+<rect x="113" y="70" width="14" height="22" rx="7" class="l" style="fill:var(--p)"/><text x="8" y="85">ACh</text><path d="M36 81 H107" class="l" marker-end="url(#h)"/>
+<rect x="113" y="118" width="14" height="22" rx="7" class="l" style="fill:var(--p)"/><text x="8" y="133">Gastrin</text><path d="M56 129 H107" class="l" marker-end="url(#h)"/>
+<rect x="113" y="166" width="14" height="22" rx="4" class="l" style="fill:var(--p)"/><text x="8" y="181">Histamine</text><text x="8" y="195" class="y s">(H₂, from ECL cell)</text><path d="M68 177 H107" class="l" marker-end="url(#h)"/>
+<text x="150" y="104" class="b">Ca²⁺</text><text x="150" y="176" class="b">cAMP</text>
+<path d="M127 81 C140 86 146 92 150 96" class="l"/><path d="M127 129 C140 120 146 112 150 108" class="l"/><path d="M127 177 C138 176 144 174 148 172" class="l"/>
+<path d="M186 100 C230 108 266 120 296 128" class="l" stroke-dasharray="4 3" marker-end="url(#h)"/>
+<path d="M190 170 C230 160 266 150 296 142" class="l" stroke-dasharray="4 3" marker-end="url(#h)"/>
+<text x="232" y="214" text-anchor="middle" class="s">H₂O + CO₂ → H₂CO₃ → H⁺ + HCO₃⁻</text>
+<path d="M170 222 C150 232 120 236 92 236" class="l" marker-end="url(#h)"/><text x="10" y="240" class="s">HCO₃⁻ → blood</text>
+<!-- pump -->
+<circle cx="350" cy="136" r="20" class="l" stroke-width="2.2" style="fill:var(--p)"/>
+<text x="350" y="140" text-anchor="middle" font-size="10" class="b">H⁺/K⁺</text>
+<text x="350" y="172" text-anchor="middle" class="s">H⁺/K⁺-ATPase</text><text x="350" y="185" text-anchor="middle" class="s">(proton pump)</text>
+<path d="M440 104 C410 104 384 112 366 122" class="l" marker-end="url(#h)"/><text x="444" y="108" class="b">K⁺</text>
+<path d="M370 140 C400 144 418 146 436 148" class="l" marker-end="url(#h)"/><text x="440" y="152" class="b">H⁺</text>
+<path d="M350 230 C390 230 410 226 436 222" class="l" marker-end="url(#h)"/><text x="440" y="226" class="b">Cl⁻</text><text x="410" y="246" class="s">→ HCl</text>
+<!-- PPI -->
+<text x="372" y="66" class="r b">PPI</text><text x="372" y="80" class="r s">(omeprazole)</text>
+<path d="M378 86 C372 96 366 104 362 112" class="l" style="stroke:var(--a)" marker-end="url(#hr)"/>
+<path d="M366 118 L384 136 M384 118 L366 136" class="l" style="stroke:var(--a);stroke-width:2.8"/>
+<text x="235" y="290" text-anchor="middle" class="r s">PPI blocks the final step irreversibly → no H⁺/HCl, whatever stimulates the cell</text>
+</svg>

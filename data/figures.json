@@ -1,0 +1,2391 @@
+{
+  "digoxin": {
+    "kind": "mols",
+    "caption": "Digoxin (cardiac glycoside)",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 18
+    },
+    "mols": [
+      {
+        "name": "Digoxin",
+        "formula": "C41H64O14",
+        "bond": 18,
+        "nostereo": true
+      }
+    ]
+  },
+  "promethazine": {
+    "kind": "mols",
+    "caption": "Promethazine (phenothiazine H1-antagonist)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 18
+    },
+    "mols": [
+      {
+        "name": "Promethazine",
+        "formula": "C17H20N2S"
+      }
+    ]
+  },
+  "la-benzoic-esters": {
+    "kind": "mols",
+    "caption": "Benzoic acid derivative local anaesthetics",
+    "src": {
+      "code": "BP501T",
+      "unit": 5,
+      "page": 11
+    },
+    "mols": [
+      {
+        "name": "Cocaine",
+        "formula": "C17H21NO4"
+      },
+      {
+        "name": "Meprylcaine",
+        "formula": "C14H21NO2"
+      },
+      {
+        "name": "Hexylcaine",
+        "formula": "C16H23NO2"
+      },
+      {
+        "name": "Cyclomethycaine",
+        "formula": "C22H33NO3"
+      }
+    ]
+  },
+  "warfarin-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of warfarin",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 16
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Methyl ester of acetylsalicylic acid",
+            "smiles": "COC(=O)c1ccccc1OC(C)=O",
+            "formula": "C10H10O4"
+          }
+        ]
+      },
+      {
+        "arrow": "Na, 205 °C|− H₂O, − CH₃OH"
+      },
+      {
+        "mols": [
+          {
+            "name": "4-Hydroxycoumarin (Na salt)",
+            "smiles": "O=c1cc(O[Na])c2ccccc2o1",
+            "formula": "C9H5NaO3"
+          }
+        ]
+      },
+      {
+        "arrow": "HCl"
+      },
+      {
+        "mols": [
+          {
+            "name": "4-Hydroxycoumarin",
+            "pubchem": "4-hydroxycoumarin",
+            "formula": "C9H6O3"
+          },
+          {
+            "name": "Benzalacetone",
+            "pubchem": "benzalacetone",
+            "formula": "C10H10O"
+          }
+        ]
+      },
+      {
+        "arrow": "[H]⁺|(Michael addition)"
+      },
+      {
+        "mols": [
+          {
+            "name": "Warfarin",
+            "formula": "C19H16O4"
+          }
+        ]
+      }
+    ]
+  },
+  "h2-blocker-moa": {
+    "kind": "svg",
+    "caption": "H2-antagonists: block histamine at the parietal cell → less H⁺ (acid)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 20
+    }
+  },
+  "warfarin": {
+    "kind": "mols",
+    "caption": "Warfarin (coumarin anticoagulant)",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 16
+    },
+    "mols": [
+      {
+        "name": "Warfarin",
+        "formula": "C19H16O4"
+      }
+    ]
+  },
+  "cimetidine": {
+    "kind": "mols",
+    "caption": "Cimetidine (H2-antagonist)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 20
+    },
+    "mols": [
+      {
+        "name": "Cimetidine",
+        "formula": "C10H16N6S"
+      }
+    ]
+  },
+  "h2-antagonists": {
+    "kind": "mols",
+    "caption": "H2-antagonists",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 20
+    },
+    "mols": [
+      {
+        "name": "Cimetidine",
+        "formula": "C10H16N6S"
+      },
+      {
+        "name": "Famotidine",
+        "formula": "C8H15N7O2S3"
+      },
+      {
+        "name": "Ranitidine",
+        "formula": "C13H22N4O3S"
+      }
+    ]
+  },
+  "methotrexate": {
+    "kind": "mols",
+    "caption": "Methotrexate (antimetabolite)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 36
+    },
+    "mols": [
+      {
+        "name": "Methotrexate",
+        "formula": "C20H22N8O5",
+        "bond": 20
+      }
+    ]
+  },
+  "nitroglycerin": {
+    "kind": "mols",
+    "caption": "Nitroglycerin (glyceryl trinitrate)",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 6
+    },
+    "mols": [
+      {
+        "name": "Nitroglycerin",
+        "formula": "C3H5N3O9"
+      }
+    ]
+  },
+  "isosorbide-dinitrate": {
+    "kind": "mols",
+    "caption": "Isosorbide dinitrate",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 6
+    },
+    "mols": [
+      {
+        "name": "Isosorbide dinitrate",
+        "formula": "C6H8N2O8"
+      }
+    ]
+  },
+  "digitoxin": {
+    "kind": "mols",
+    "caption": "Digitoxin (cardiac glycoside)",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 19
+    },
+    "mols": [
+      {
+        "name": "Digitoxin",
+        "formula": "C41H64O13",
+        "bond": 18,
+        "nostereo": true
+      }
+    ]
+  },
+  "clopidogrel": {
+    "kind": "mols",
+    "caption": "Clopidogrel (P2Y12 blocker)",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 16
+    },
+    "mols": [
+      {
+        "name": "Clopidogrel",
+        "formula": "C16H16ClNO2S"
+      }
+    ]
+  },
+  "testosterone": {
+    "kind": "mols",
+    "caption": "Testosterone",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 9
+    },
+    "mols": [
+      {
+        "name": "Testosterone",
+        "formula": "C19H28O2"
+      }
+    ]
+  },
+  "mechlorethamine": {
+    "kind": "mols",
+    "caption": "Mechlorethamine (nitrogen mustard)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 32
+    },
+    "mols": [
+      {
+        "name": "Mechlorethamine",
+        "formula": "C5H11Cl2N"
+      }
+    ]
+  },
+  "piperocaine": {
+    "kind": "mols",
+    "caption": "Piperocaine",
+    "src": {
+      "code": "BP501T",
+      "unit": 5,
+      "page": 12
+    },
+    "mols": [
+      {
+        "name": "Piperocaine",
+        "formula": "C16H23NO2"
+      }
+    ]
+  },
+  "la-anilides": {
+    "kind": "mols",
+    "caption": "Lidocaine / anilide local anaesthetics",
+    "src": {
+      "code": "BP501T",
+      "unit": 5,
+      "page": 12
+    },
+    "mols": [
+      {
+        "name": "Lidocaine",
+        "formula": "C14H22N2O"
+      },
+      {
+        "name": "Mepivacaine",
+        "formula": "C15H22N2O"
+      },
+      {
+        "name": "Prilocaine",
+        "formula": "C13H20N2O"
+      },
+      {
+        "name": "Etidocaine",
+        "formula": "C17H28N2O"
+      }
+    ]
+  },
+  "la-misc": {
+    "kind": "mols",
+    "caption": "Miscellaneous local anaesthetics",
+    "src": {
+      "code": "BP501T",
+      "unit": 5,
+      "page": 13
+    },
+    "mols": [
+      {
+        "name": "Phenacaine",
+        "formula": "C18H22N2O2"
+      },
+      {
+        "name": "Diperodon",
+        "formula": "C22H27N3O4"
+      },
+      {
+        "name": "Dibucaine",
+        "formula": "C20H29N3O2"
+      }
+    ],
+    "per_row": 1
+  },
+  "methyldopate": {
+    "kind": "mols",
+    "caption": "Methyldopate hydrochloride (ethyl ester of methyldopa)",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 27
+    },
+    "mols": [
+      {
+        "name": "Methyldopate",
+        "formula": "C12H17NO4",
+        "pubchem": "methyldopate"
+      }
+    ]
+  },
+  "chlorothiazide": {
+    "kind": "mols",
+    "caption": "Chlorothiazide (benzothiadiazine)",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 17
+    },
+    "mols": [
+      {
+        "name": "Chlorothiazide",
+        "formula": "C7H6ClN3O4S2"
+      }
+    ]
+  },
+  "lovastatin": {
+    "kind": "mols",
+    "caption": "Lovastatin (HMG-CoA reductase inhibitor)",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 11
+    },
+    "mols": [
+      {
+        "name": "Lovastatin",
+        "formula": "C24H36O5"
+      }
+    ]
+  },
+  "clofibrate": {
+    "kind": "mols",
+    "caption": "Clofibrate (fibrate)",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 11
+    },
+    "mols": [
+      {
+        "name": "Clofibrate",
+        "formula": "C12H15ClO3"
+      }
+    ]
+  },
+  "tolbutamide": {
+    "kind": "mols",
+    "caption": "Tolbutamide (sulfonylurea)",
+    "src": {
+      "code": "BP501T",
+      "unit": 5,
+      "page": 6
+    },
+    "mols": [
+      {
+        "name": "Tolbutamide",
+        "formula": "C12H18N2O3S"
+      }
+    ]
+  },
+  "propylthiouracil": {
+    "kind": "mols",
+    "caption": "Propylthiouracil",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 25
+    },
+    "mols": [
+      {
+        "name": "Propylthiouracil",
+        "formula": "C7H10N2OS"
+      }
+    ]
+  },
+  "methimazole": {
+    "kind": "mols",
+    "caption": "Methimazole",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 25
+    },
+    "mols": [
+      {
+        "name": "Methimazole",
+        "formula": "C4H6N2S"
+      }
+    ]
+  },
+  "thyroid-hormones": {
+    "kind": "mols",
+    "caption": "Thyroid hormones",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 25
+    },
+    "mols": [
+      {
+        "name": "L-Thyroxine (T4)",
+        "formula": "C15H11I4NO4",
+        "pubchem": "levothyroxine"
+      },
+      {
+        "name": "L-Triiodothyronine (T3)",
+        "formula": "C15H12I3NO4",
+        "pubchem": "liothyronine"
+      }
+    ],
+    "per_row": 1
+  },
+  "diphenhydramine": {
+    "kind": "mols",
+    "caption": "Diphenhydramine (H1-antagonist)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 9
+    },
+    "mols": [
+      {
+        "name": "Diphenhydramine",
+        "formula": "C17H21NO"
+      }
+    ]
+  },
+  "omeprazole": {
+    "kind": "mols",
+    "caption": "Omeprazole (proton pump inhibitor)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 23
+    },
+    "mols": [
+      {
+        "name": "Omeprazole",
+        "formula": "C17H19N3O3S"
+      }
+    ]
+  },
+  "captopril": {
+    "kind": "mols",
+    "caption": "Captopril (ACE inhibitor)",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 26
+    },
+    "mols": [
+      {
+        "name": "Captopril",
+        "formula": "C9H15NO3S"
+      }
+    ]
+  },
+  "acetazolamide": {
+    "kind": "mols",
+    "caption": "Acetazolamide (carbonic anhydrase inhibitor)",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 13
+    },
+    "mols": [
+      {
+        "name": "Acetazolamide",
+        "formula": "C4H6N4O3S2"
+      }
+    ]
+  },
+  "steroid-nucleus": {
+    "kind": "svg",
+    "caption": "Cyclopentanoperhydrophenanthrene (gonane) with numbering C1–C17; rings A, B, C (6-membered) and D (5-membered)",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 3
+    }
+  },
+  "steroid-parents": {
+    "kind": "mols",
+    "caption": "Parent steroid hydrocarbons",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 4
+    },
+    "mols": [
+      {
+        "name": "Gonane (C17)",
+        "formula": "C17H28",
+        "pubchem": "gonane",
+        "nostereo": true
+      },
+      {
+        "name": "Estrane (C18)",
+        "formula": "C18H30",
+        "pubchem": "estrane",
+        "nostereo": true
+      },
+      {
+        "name": "Androstane (C19)",
+        "formula": "C19H32",
+        "pubchem": "androstane",
+        "nostereo": true
+      },
+      {
+        "name": "Pregnane (C21)",
+        "formula": "C21H36",
+        "pubchem": "pregnane",
+        "nostereo": true
+      },
+      {
+        "name": "Cholane (C24)",
+        "formula": "C24H42",
+        "pubchem": "cholane",
+        "nostereo": true
+      },
+      {
+        "name": "Cholestane (C27)",
+        "formula": "C27H48",
+        "pubchem": "cholestane",
+        "nostereo": true
+      }
+    ]
+  },
+  "steroid-5a-5b": {
+    "kind": "mols",
+    "caption": "5α (A/B trans, 'allo' series) vs 5β (A/B cis, 'normal' series): H at C5 below vs above the plane",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 7
+    },
+    "mols": [
+      {
+        "name": "5α-Androstane",
+        "formula": "C19H32",
+        "pubchem": "5alpha-androstane"
+      },
+      {
+        "name": "5β-Androstane",
+        "formula": "C19H32",
+        "pubchem": "5beta-androstane"
+      }
+    ]
+  },
+  "cimetidine-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of cimetidine",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 21
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "2-Chloroacetoacetic ether",
+            "formula": "C6H9ClO3",
+            "smiles": "CCOC(=O)C(Cl)C(C)=O"
+          },
+          {
+            "name": "Formamide",
+            "formula": "CH3NO",
+            "smiles": "NC=O"
+          }
+        ]
+      },
+      {
+        "arrow": ""
+      },
+      {
+        "mols": [
+          {
+            "name": "4-Carbethoxy-5-methylimidazole",
+            "formula": "C7H10N2O2",
+            "smiles": "CCOC(=O)c1nc[nH]c1C"
+          }
+        ]
+      },
+      {
+        "arrow": "Na / liq. NH₃|(reduction)"
+      },
+      {
+        "mols": [
+          {
+            "name": "4-Hydroxymethyl-5-methylimidazole",
+            "formula": "C5H8N2O",
+            "smiles": "OCc1nc[nH]c1C"
+          },
+          {
+            "name": "2-Mercaptoethylamine",
+            "formula": "C2H7NS",
+            "smiles": "NCCS"
+          }
+        ]
+      },
+      {
+        "arrow": "HCl"
+      },
+      {
+        "mols": [
+          {
+            "name": "2-[(5-Methylimidazol-4-yl)methylthio]ethylamine",
+            "formula": "C7H13N3S",
+            "smiles": "NCCSCc1nc[nH]c1C"
+          },
+          {
+            "name": "Dimethyl cyanocarbonimidodithioate",
+            "formula": "C4H6N2S2",
+            "smiles": "CSC(=NC#N)SC"
+          }
+        ]
+      },
+      {
+        "arrow": ""
+      },
+      {
+        "mols": [
+          {
+            "name": "N-Cyano-S-methylisothiourea intermediate",
+            "formula": "C10H15N5S2",
+            "smiles": "CSC(=NC#N)NCCSCc1nc[nH]c1C"
+          }
+        ]
+      },
+      {
+        "arrow": "CH₃NH₂|(methylamine)"
+      },
+      {
+        "mols": [
+          {
+            "name": "Cimetidine",
+            "formula": "C10H16N6S"
+          }
+        ]
+      }
+    ]
+  },
+  "mechlorethamine-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of mechlorethamine",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 33
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Methylamine",
+            "formula": "CH5N",
+            "smiles": "CN"
+          },
+          {
+            "name": "Ethylene oxide (2 mol)",
+            "formula": "C2H4O",
+            "smiles": "C1CO1"
+          }
+        ]
+      },
+      {
+        "arrow": ""
+      },
+      {
+        "mols": [
+          {
+            "name": "N-Methyldiethanolamine",
+            "formula": "C5H13NO2",
+            "smiles": "CN(CCO)CCO"
+          }
+        ]
+      },
+      {
+        "arrow": "SOCl₂"
+      },
+      {
+        "mols": [
+          {
+            "name": "Mechlorethamine",
+            "formula": "C5H11Cl2N"
+          }
+        ]
+      }
+    ]
+  },
+  "alkylation-moa": {
+    "kind": "scheme",
+    "caption": "Mechanism of nitrogen mustards: Step I intramolecular cyclization (SN1) to the aziridinium ion; Step II SN2 attack by N7 of guanine in DNA",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 31
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Mechlorethamine",
+            "formula": "C5H11Cl2N"
+          }
+        ]
+      },
+      {
+        "arrow": "Step I: cyclization (SN1)|− Cl⁻"
+      },
+      {
+        "mols": [
+          {
+            "name": "Aziridinium (ethyleniminium) ion",
+            "formula": "C5H11ClN+",
+            "smiles": "C[N+]1(CCCl)CC1"
+          }
+        ]
+      },
+      {
+        "arrow": "Step II: + N7 of guanine|in DNA (SN2)"
+      },
+      {
+        "mols": [
+          {
+            "name": "N7-alkylated guanine in DNA",
+            "formula": "",
+            "smiles": "Nc1nc2c([n+](CCN(C)CCCl)cn2*)c(=O)[nH]1",
+            "dummy": "DNA"
+          }
+        ]
+      }
+    ]
+  },
+  "diphenhydramine-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of diphenhydramine (the base + HCl gives diphenhydramine hydrochloride)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 9
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Diphenylmethane",
+            "formula": "C13H12",
+            "smiles": "C(c1ccccc1)c1ccccc1"
+          }
+        ]
+      },
+      {
+        "arrow": "Br₂, light"
+      },
+      {
+        "mols": [
+          {
+            "name": "Benzhydryl bromide",
+            "formula": "C13H11Br",
+            "smiles": "BrC(c1ccccc1)c1ccccc1"
+          },
+          {
+            "name": "β-Dimethylaminoethanol",
+            "formula": "C4H11NO",
+            "smiles": "CN(C)CCO"
+          }
+        ]
+      },
+      {
+        "arrow": "Na₂CO₃, 140 °C|− HBr"
+      },
+      {
+        "mols": [
+          {
+            "name": "Diphenhydramine (base)",
+            "formula": "C17H21NO",
+            "pubchem": "diphenhydramine"
+          }
+        ]
+      }
+    ]
+  },
+  "promethazine-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of promethazine",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 18
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Phenothiazine",
+            "formula": "C12H9NS",
+            "smiles": "c1ccc2c(c1)Nc1ccccc1S2"
+          },
+          {
+            "name": "1-Dimethylamino-2-chloropropane",
+            "formula": "C5H12ClN",
+            "smiles": "CC(Cl)CN(C)C"
+          }
+        ]
+      },
+      {
+        "arrow": "NaNH₂"
+      },
+      {
+        "mols": [
+          {
+            "name": "Promethazine",
+            "formula": "C17H20N2S"
+          }
+        ]
+      }
+    ]
+  },
+  "acetazolamide-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of acetazolamide",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 14
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Hydrazine (hydrate)",
+            "formula": "H4N2",
+            "smiles": "NN"
+          }
+        ]
+      },
+      {
+        "arrow": "NH₄SCN"
+      },
+      {
+        "mols": [
+          {
+            "name": "1,2-Bis(thiocarbamoyl)hydrazine",
+            "formula": "C2H6N4S2",
+            "smiles": "NC(=S)NNC(N)=S"
+          }
+        ]
+      },
+      {
+        "arrow": "Phosgene, cyclization"
+      },
+      {
+        "mols": [
+          {
+            "name": "5-Amino-1,3,4-thiadiazole-2-thiol",
+            "formula": "C2H3N3S2",
+            "smiles": "Nc1nnc(S)s1"
+          }
+        ]
+      },
+      {
+        "arrow": "CH₃COCl|(acylation)"
+      },
+      {
+        "mols": [
+          {
+            "name": "5-Acetamido-1,3,4-thiadiazole-2-thiol",
+            "formula": "C4H5N3OS2",
+            "smiles": "CC(=O)Nc1nnc(S)s1"
+          }
+        ]
+      },
+      {
+        "arrow": "aq. Cl₂|(oxidation)"
+      },
+      {
+        "mols": [
+          {
+            "name": "Sulfonyl chloride",
+            "formula": "C4H4ClN3O3S2",
+            "smiles": "CC(=O)Nc1nnc(S(=O)(=O)Cl)s1"
+          }
+        ]
+      },
+      {
+        "arrow": "NH₃"
+      },
+      {
+        "mols": [
+          {
+            "name": "Acetazolamide",
+            "formula": "C4H6N4O3S2"
+          }
+        ]
+      }
+    ]
+  },
+  "chlorothiazide-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of chlorothiazide",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 17
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "3-Chloroaniline",
+            "formula": "C6H6ClN",
+            "smiles": "Nc1cccc(Cl)c1"
+          }
+        ]
+      },
+      {
+        "arrow": "ClSO₃H|(chlorosulfonic acid)"
+      },
+      {
+        "mols": [
+          {
+            "name": "4-Amino-6-chlorobenzene-1,3-disulfonyl dichloride",
+            "formula": "C6H4Cl3NO4S2",
+            "smiles": "Nc1cc(Cl)c(S(=O)(=O)Cl)cc1S(=O)(=O)Cl"
+          }
+        ]
+      },
+      {
+        "arrow": "NH₃"
+      },
+      {
+        "mols": [
+          {
+            "name": "4,6-Sulfonylamido-3-chloroaniline",
+            "formula": "C6H8ClN3O4S2",
+            "smiles": "Nc1cc(Cl)c(S(N)(=O)=O)cc1S(N)(=O)=O"
+          }
+        ]
+      },
+      {
+        "arrow": "HCONH₂ (formamide)|heat"
+      },
+      {
+        "mols": [
+          {
+            "name": "Chlorothiazide",
+            "formula": "C7H6ClN3O4S2"
+          }
+        ]
+      }
+    ]
+  },
+  "furosemide-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of furosemide",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 19
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "2,4-Dichlorobenzoic acid",
+            "formula": "C7H4Cl2O2",
+            "smiles": "OC(=O)c1ccc(Cl)cc1Cl"
+          }
+        ]
+      },
+      {
+        "arrow": "(i) ClSO₃H, Δ|(ii) NH₃"
+      },
+      {
+        "mols": [
+          {
+            "name": "2,4-Dichloro-5-sulfamoylbenzoic acid",
+            "formula": "C7H5Cl2NO4S",
+            "smiles": "NS(=O)(=O)c1cc(C(=O)O)c(Cl)cc1Cl"
+          },
+          {
+            "name": "Furfurylamine",
+            "formula": "C5H7NO",
+            "smiles": "NCc1ccco1"
+          }
+        ]
+      },
+      {
+        "arrow": "NaHCO₃|− HCl"
+      },
+      {
+        "mols": [
+          {
+            "name": "Furosemide",
+            "formula": "C12H11ClN2O5S"
+          }
+        ]
+      }
+    ]
+  },
+  "methyldopa-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of methyldopa (methyldopate HCl is its ethyl ester hydrochloride)",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 29
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "4-Hydroxy-3-methoxyphenylacetone",
+            "formula": "C10H12O3",
+            "smiles": "COc1cc(CC(C)=O)ccc1O"
+          }
+        ]
+      },
+      {
+        "arrow": "1. NH₄Cl  2. KCN"
+      },
+      {
+        "mols": [
+          {
+            "name": "α-Aminonitrile",
+            "formula": "C11H14N2O2",
+            "smiles": "COc1cc(CC(C)(N)C#N)ccc1O"
+          }
+        ]
+      },
+      {
+        "arrow": "1. camphorsulfonic acid|2. H₂SO₄"
+      },
+      {
+        "mols": [
+          {
+            "name": "Methyldopa",
+            "formula": "C10H13NO4"
+          }
+        ]
+      }
+    ]
+  },
+  "disopyramide-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of disopyramide phosphate",
+    "src": {
+      "code": "BP501T",
+      "unit": 3,
+      "page": 7
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Benzyl cyanide",
+            "formula": "C8H7N",
+            "smiles": "N#CCc1ccccc1"
+          },
+          {
+            "name": "2-Chloropyridine",
+            "formula": "C5H4ClN",
+            "smiles": "Clc1ccccn1"
+          }
+        ]
+      },
+      {
+        "arrow": "NaNH₂"
+      },
+      {
+        "mols": [
+          {
+            "name": "Phenyl(2-pyridyl)acetonitrile",
+            "formula": "C13H10N2",
+            "smiles": "N#CC(c1ccccc1)c1ccccn1"
+          }
+        ]
+      },
+      {
+        "arrow": "(i) (iPr)₂NCH₂CH₂Cl|(ii) NaNH₂"
+      },
+      {
+        "mols": [
+          {
+            "name": "4-Diisopropylamino-2-phenyl-2-(2-pyridyl)butyronitrile",
+            "formula": "C21H27N3",
+            "smiles": "CC(C)N(CCC(C#N)(c1ccccc1)c1ccccn1)C(C)C"
+          }
+        ]
+      },
+      {
+        "arrow": "(i) conc. H₂SO₄|(ii) H₃PO₄"
+      },
+      {
+        "mols": [
+          {
+            "name": "Disopyramide (phosphate salt)",
+            "formula": "C21H29N3O",
+            "pubchem": "disopyramide"
+          }
+        ]
+      }
+    ]
+  },
+  "dibucaine-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of dibucaine",
+    "src": {
+      "code": "BP501T",
+      "unit": 5,
+      "page": 14
+    },
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Isatin",
+            "formula": "C8H5NO2",
+            "smiles": "O=C1Nc2ccccc2C1=O"
+          }
+        ]
+      },
+      {
+        "arrow": "(CH₃CO)₂O"
+      },
+      {
+        "mols": [
+          {
+            "name": "N-Acetylisatin",
+            "formula": "C10H7NO3",
+            "smiles": "CC(=O)N1C(=O)C(=O)c2ccccc21"
+          }
+        ]
+      },
+      {
+        "arrow": "NaOH|(rearrangement)"
+      },
+      {
+        "mols": [
+          {
+            "name": "2-Hydroxyquinoline-4-carboxylic acid",
+            "formula": "C10H7NO3",
+            "smiles": "OC(=O)c1cc(O)nc2ccccc12"
+          }
+        ]
+      },
+      {
+        "arrow": "PCl₅"
+      },
+      {
+        "mols": [
+          {
+            "name": "2-Chloroquinoline-4-carbonyl chloride",
+            "formula": "C10H5Cl2NO",
+            "smiles": "O=C(Cl)c1cc(Cl)nc2ccccc12"
+          }
+        ]
+      },
+      {
+        "arrow": "(C₂H₅)₂N–CH₂CH₂–NH₂"
+      },
+      {
+        "mols": [
+          {
+            "name": "2-Chloro-N-(2-diethylaminoethyl)quinoline-4-carboxamide",
+            "formula": "C16H20ClN3O",
+            "smiles": "CCN(CC)CCNC(=O)c1cc(Cl)nc2ccccc12"
+          }
+        ]
+      },
+      {
+        "arrow": "C₄H₉ONa|(sodium butoxide)"
+      },
+      {
+        "mols": [
+          {
+            "name": "Dibucaine",
+            "formula": "C20H29N3O2"
+          }
+        ]
+      }
+    ]
+  },
+  "thiazide-moa": {
+    "kind": "svg",
+    "caption": "Thiazides block the Na⁺Cl⁻ cotransporter in the distal convoluted tubule → more NaCl and water in urine",
+    "src": {
+      "code": "BP501T",
+      "unit": 2,
+      "page": 15
+    }
+  },
+  "metformin-moa": {
+    "kind": "svg",
+    "caption": "Metformin: inhibits mitochondrial complex I and mGPD → ↑AMP:ATP → AMPK activation; ↓ hepatic gluconeogenesis",
+    "src": {
+      "code": "BP501T",
+      "unit": 5,
+      "page": 7
+    }
+  },
+  "ppi-moa": {
+    "kind": "svg",
+    "caption": "Proton pump inhibitors irreversibly block H⁺/K⁺-ATPase → no H⁺ (HCl) secretion, whatever stimulates the cell",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 22
+    }
+  },
+  "steroid-chair-boat": {
+    "kind": "svg",
+    "caption": "Cyclohexane chair and boat; steroid rings are in the chair form",
+    "src": {
+      "code": "BP501T",
+      "unit": 4,
+      "page": 7
+    }
+  },
+  "mercaptopurine": {
+    "kind": "mols",
+    "caption": "Mercaptopurine (6-MP, purine antimetabolite)",
+    "src": {
+      "code": "BP501T",
+      "unit": 1,
+      "page": 34
+    },
+    "mols": [
+      {
+        "name": "Mercaptopurine",
+        "formula": "C5H4N4S",
+        "pubchem": "mercaptopurine"
+      }
+    ]
+  },
+  "mercaptopurine-synthesis": {
+    "kind": "scheme",
+    "caption": "Synthesis of mercaptopurine (not in notes; Elion & Hitchings, J. Am. Chem. Soc. 74, 411, 1952)",
+    "steps": [
+      {
+        "mols": [
+          {
+            "name": "Hypoxanthine (6-hydroxypurine)",
+            "formula": "C5H4N4O",
+            "pubchem": "hypoxanthine"
+          }
+        ]
+      },
+      {
+        "arrow": "P₂S₅ (phosphorus pentasulfide)|heat (O → S exchange)"
+      },
+      {
+        "mols": [
+          {
+            "name": "6-Mercaptopurine",
+            "formula": "C5H4N4S",
+            "pubchem": "mercaptopurine"
+          }
+        ]
+      }
+    ]
+  },
+  "pelletization": {
+    "kind": "flow",
+    "caption": "Pelletization process (extrusion–spheronization)",
+    "src": {
+      "code": "BP502T",
+      "unit": 3,
+      "page": 23
+    },
+    "steps": [
+      {
+        "t": "Mixing of API + excipients",
+        "side": "homogeneous blend"
+      },
+      {
+        "t": "Wet massing",
+        "via": "binder solution",
+        "side": "plastic mass for extrusion"
+      },
+      {
+        "t": "Extrusion",
+        "side": "cylindrical extrudates"
+      },
+      {
+        "t": "Spheronization",
+        "via": "spheronizer",
+        "side": "extrudates broken and rounded into spheres"
+      },
+      {
+        "t": "Drying",
+        "side": "fluidized bed or tray dryer"
+      },
+      {
+        "t": "Screening",
+        "side": "sieves → uniform size"
+      },
+      {
+        "t": "Coating (optional)",
+        "side": "modified / controlled release",
+        "hl": "b"
+      }
+    ]
+  },
+  "softgel-rotary-die": {
+    "kind": "flow",
+    "caption": "Soft gelatin capsules: rotary die process",
+    "src": {
+      "code": "BP502T",
+      "unit": 3,
+      "page": 12
+    },
+    "steps": [
+      {
+        "t": "Gelatin ribbons form on two rotating dies",
+        "side": "gelatin 45–55 °C"
+      },
+      {
+        "t": "Fill injected into the pocket between upper and lower ribbons",
+        "side": "fill 30–45 °C"
+      },
+      {
+        "t": "Pressure seals the capsule",
+        "side": "die pressure 20–40 psi"
+      },
+      {
+        "t": "Cutters separate capsule from ribbon; gelatin residue falls away"
+      },
+      {
+        "t": "Softening / conditioning",
+        "side": "50–55% RH, 2–4 h"
+      },
+      {
+        "t": "Separation, then drying",
+        "side": "moisture down to 4–8%",
+        "hl": "b"
+      }
+    ]
+  },
+  "lyophilization-cycle": {
+    "kind": "flow",
+    "caption": "Lyophilization (freeze-drying) cycle",
+    "src": {
+      "code": "BP502T",
+      "unit": 4,
+      "page": 11
+    },
+    "steps": [
+      {
+        "t": "Formulation + sterile filling into vials",
+        "side": "bulking agent, stabiliser; partially stoppered"
+      },
+      {
+        "t": "Freezing",
+        "side": "−40 to −50 °C"
+      },
+      {
+        "t": "Primary drying (sublimation)",
+        "side": "0.1–1 mbar; shelf −10 to −30 °C; removes ~90–95% water",
+        "hl": "b"
+      },
+      {
+        "t": "Secondary drying (desorption)",
+        "side": "+20 to +40 °C; residual moisture < 1–3%",
+        "hl": "b"
+      },
+      {
+        "t": "Stoppering under nitrogen inside the lyophilizer"
+      }
+    ]
+  },
+  "hgc-shell-production": {
+    "kind": "flow",
+    "caption": "Production of hard gelatin capsule shells",
+    "src": {
+      "code": "BP502T",
+      "unit": 3,
+      "page": 4
+    },
+    "steps": [
+      "Raw materials (gelatin, water, colourants)",
+      "Melting → gelatin solution",
+      {
+        "t": "Holding and viscosity control",
+        "side": "50–55 °C"
+      },
+      {
+        "t": "Dip coating of stainless-steel pins, with rotation",
+        "hl": "b"
+      },
+      {
+        "t": "Drying",
+        "side": "60–70 °C"
+      },
+      "Precision trimming and joining of cap and body",
+      "Finishing and quality control",
+      "Packaging and storage"
+    ]
+  },
+  "emulsion-manufacture": {
+    "kind": "flow",
+    "caption": "Manufacture of emulsions",
+    "src": {
+      "code": "BP502T",
+      "unit": 2,
+      "page": 33
+    },
+    "steps": [
+      {
+        "t": "Oil phase and aqueous phase prepared and heated (separately)"
+      },
+      {
+        "t": "Mixing and emulsification",
+        "side": "high-shear agitation; emulsifying agent",
+        "hl": "b"
+      },
+      {
+        "t": "Homogenization and cooling",
+        "side": "uniform small globules"
+      },
+      {
+        "t": "Filling and packaging"
+      }
+    ]
+  },
+  "tablet-formulation-steps": {
+    "kind": "flow",
+    "caption": "Steps in formulation of tablets",
+    "src": {
+      "code": "BP502T",
+      "unit": 2,
+      "page": 4
+    },
+    "steps": [
+      {
+        "t": "1. Preformulation studies",
+        "side": "solubility, stability, particle size/flow, compatibility"
+      },
+      {
+        "t": "2. Selection of excipients"
+      },
+      {
+        "t": "3. Manufacturing method",
+        "side": "wet granulation, dry granulation or direct compression"
+      },
+      {
+        "t": "4. Granulation / blending",
+        "side": "granule formation, drying/sizing, lubricant addition"
+      },
+      {
+        "t": "5. Compression",
+        "side": "control weight, thickness, hardness"
+      },
+      {
+        "t": "6. Coating (if required)",
+        "side": "sugar, film, enteric: protection, taste masking, controlled release"
+      },
+      {
+        "t": "7. Evaluation (QC tests)",
+        "hl": "b"
+      }
+    ]
+  },
+  "autoxidation": {
+    "kind": "flow",
+    "caption": "Autoxidation: free-radical chain reaction",
+    "src": {
+      "code": "BP502T",
+      "unit": 1,
+      "page": 12
+    },
+    "steps": [
+      {
+        "t": "1. Initiation",
+        "side": "free radicals (R•) formed; catalysed by light, heat, metal ions",
+        "hl": "r"
+      },
+      {
+        "t": "2. Propagation",
+        "side": "R• + O₂ → peroxy radical (ROO•), which attacks more drug molecules → chain",
+        "hl": "r"
+      },
+      {
+        "t": "3. Termination",
+        "side": "radicals combine → stable, non-reactive products",
+        "hl": "g"
+      }
+    ],
+    "fan": [
+      "Prevent: antioxidants (ascorbic acid, BHA, BHT)",
+      "Prevent: chelating agents (EDTA) bind metal ions"
+    ]
+  },
+  "shampoo-manufacture": {
+    "kind": "flow",
+    "caption": "Manufacture of shampoo",
+    "src": {
+      "code": "BP502T",
+      "unit": 5,
+      "page": 3
+    },
+    "steps": [
+      "Raw material quality check",
+      "Water purification",
+      {
+        "t": "Surfactant mixing",
+        "hl": "b"
+      },
+      "Additive blending",
+      "Fragrance and colour addition",
+      "Homogenization",
+      "Quality testing",
+      "Filling and sealing"
+    ]
+  },
+  "lipstick-composition": {
+    "kind": "bars",
+    "caption": "Typical lipstick composition (%)",
+    "src": {
+      "code": "BP502T",
+      "unit": 5,
+      "page": 2
+    },
+    "items": [
+      {
+        "label": "Oils (castor, mineral)",
+        "lo": 30,
+        "hi": 40
+      },
+      {
+        "label": "Waxes (carnauba, beeswax)",
+        "lo": 20,
+        "hi": 30
+      },
+      {
+        "label": "Emollients & lanolin",
+        "lo": 10,
+        "hi": 15
+      },
+      {
+        "label": "Pigments & colorants",
+        "lo": 5,
+        "hi": 10
+      },
+      {
+        "label": "Film former (resin, PVP)",
+        "lo": 5,
+        "hi": 8
+      },
+      {
+        "label": "Preservatives & fragrance",
+        "lo": 2,
+        "hi": 5
+      }
+    ]
+  },
+  "nsaid-classification": {
+    "kind": "tree",
+    "caption": "Classification of NSAIDs",
+    "src": {
+      "code": "BP503T",
+      "unit": 3,
+      "page": 22
+    },
+    "root": "Non-steroidal anti-inflammatory drugs (NSAIDs)",
+    "groups": [
+      {
+        "name": "Salicylates",
+        "items": [
+          "Aspirin (acetylsalicylic acid)",
+          "Salsalate",
+          "Diflunisal"
+        ]
+      },
+      {
+        "name": "Propionic acid derivatives",
+        "items": [
+          "Fenoprofen calcium",
+          "Flurbiprofen",
+          "Ibuprofen",
+          "Ketoprofen",
+          "Naproxen",
+          "Oxaprozin"
+        ]
+      },
+      {
+        "name": "Fenamates",
+        "items": [
+          "Niflumic acid",
+          "Mefenamic acid",
+          "Meclofenamate sodium"
+        ]
+      },
+      {
+        "name": "Indoles",
+        "items": [
+          "Indomethacin",
+          "Sulindac",
+          "Tolmetin sodium"
+        ]
+      },
+      {
+        "name": "Phenylacetic acids",
+        "items": [
+          "Diclofenac sodium",
+          "Diclofenac potassium",
+          "Diclofenac sodium–misoprostol"
+        ]
+      },
+      {
+        "name": "Oxicams",
+        "items": [
+          "Piroxicam",
+          "Tenoxicam",
+          "Meloxicam"
+        ]
+      },
+      {
+        "name": "Selective COX-2 inhibitors",
+        "items": [
+          "Celecoxib",
+          "Rofecoxib"
+        ]
+      },
+      {
+        "name": "Others",
+        "items": [
+          "Phenylbutazone",
+          "Etodolac",
+          "Nabumetone",
+          "Ketorolac tromethamine"
+        ]
+      }
+    ]
+  },
+  "colchicine-gout": {
+    "kind": "flow",
+    "caption": "Colchicine in gout",
+    "src": {
+      "code": "BP503T",
+      "unit": 3,
+      "page": 23
+    },
+    "steps": [
+      {
+        "t": "Uric acid crystals deposit in the joint"
+      },
+      {
+        "t": "Neutrophils activated and migrate to the crystals",
+        "side": {
+          "t": "✗ Colchicine prevents neutrophil activation and migration",
+          "c": "r"
+        }
+      },
+      {
+        "t": "Inflammation, pain (acute gout attack)",
+        "hl": "r"
+      },
+      {
+        "t": "With colchicine: less inflammation and pain",
+        "hl": "g"
+      }
+    ]
+  },
+  "probenecid-moa": {
+    "kind": "flow",
+    "caption": "Probenecid: uricosuric action",
+    "src": {
+      "code": "BP503T",
+      "unit": 3,
+      "page": 23
+    },
+    "steps": [
+      {
+        "t": "Uric acid filtered at the glomerulus"
+      },
+      {
+        "t": "Reabsorption of uric acid in the renal tubule",
+        "side": {
+          "t": "✗ Probenecid inhibits this reabsorption",
+          "c": "r"
+        }
+      },
+      {
+        "t": "More uric acid excreted in urine",
+        "hl": "g"
+      },
+      {
+        "t": "↓ Blood uric acid → fewer urate crystals",
+        "hl": "g"
+      }
+    ]
+  },
+  "sulfonylurea-moa": {
+    "kind": "flow",
+    "caption": "Sulfonylureas: mechanism",
+    "src": {
+      "code": "BP503T",
+      "unit": 4,
+      "page": 9
+    },
+    "steps": [
+      {
+        "t": "Sulfonylurea (glibenclamide, glimepiride)",
+        "hl": "b"
+      },
+      {
+        "t": "Stimulates pancreatic β-cells"
+      },
+      {
+        "t": "↑ Insulin secretion"
+      },
+      {
+        "t": "↓ Blood glucose (type 2 diabetes)",
+        "hl": "g",
+        "side": {
+          "t": "Adverse: hypoglycaemia, weight gain",
+          "c": "r"
+        }
+      }
+    ]
+  },
+  "tsh-axis": {
+    "kind": "flow",
+    "caption": "TSH and thyroid hormones",
+    "src": {
+      "code": "BP503T",
+      "unit": 4,
+      "page": 3
+    },
+    "steps": [
+      {
+        "t": "Anterior pituitary"
+      },
+      {
+        "t": "TSH (thyroid-stimulating hormone)",
+        "hl": "b"
+      },
+      {
+        "t": "Thyroid gland",
+        "side": {
+          "t": "✗ Methimazole, PTU block hormone synthesis",
+          "c": "r"
+        }
+      },
+      {
+        "t": "T3 and T4 → regulate metabolism, energy, growth"
+      },
+      {
+        "t": "Negative feedback: T3/T4 (or levothyroxine, liothyronine replacement) suppress TSH",
+        "hl": "g"
+      }
+    ]
+  },
+  "ocp-moa": {
+    "kind": "flow",
+    "caption": "Oral contraceptives: mechanism",
+    "src": {
+      "code": "BP503T",
+      "unit": 5,
+      "page": 11
+    },
+    "steps": [
+      {
+        "t": "Combined pill (estrogen + progestin)",
+        "hl": "b"
+      },
+      {
+        "t": "Prevent ovulation",
+        "side": "↓ LH and FSH"
+      },
+      {
+        "t": "Disrupt the endometrium"
+      },
+      {
+        "t": "Modify (thicken) cervical mucus",
+        "side": "blocks sperm entry; main action of progestin-only pill"
+      },
+      {
+        "t": "No implantation → no pregnancy",
+        "hl": "g"
+      }
+    ]
+  },
+  "dtc-head-drop": {
+    "kind": "flow",
+    "caption": "Bioassay of d-tubocurarine: rabbit head-drop method",
+    "src": {
+      "code": "BP503T",
+      "unit": 5,
+      "page": 30
+    },
+    "steps": [
+      {
+        "t": "8 rabbits (~2 kg), 2 groups of 4: standard vs test",
+        "side": "rabbit in a holder, head free"
+      },
+      {
+        "t": "Infuse d-TC (0.012% w/v in saline) into marginal ear vein",
+        "side": "0.4 mL/min, ~10 min"
+      },
+      {
+        "t": "End-point: head drop",
+        "side": "neck muscles relax; rabbit cannot hold its head up",
+        "hl": "b"
+      },
+      {
+        "t": "Compare total dose of test vs standard for the same end-point",
+        "side": "cross-over test reduces animal variation"
+      },
+      {
+        "t": "Respiratory distress → neostigmine + atropine IV",
+        "hl": "r"
+      }
+    ]
+  },
+  "nitrate-moa": {
+    "kind": "flow",
+    "caption": "Nitrates (NO donors): mechanism of vasodilation",
+    "src": {
+      "code": "BP503T",
+      "unit": 1,
+      "page": 8
+    },
+    "steps": [
+      {
+        "t": "Organic nitrate (nitroglycerin)",
+        "hl": "b"
+      },
+      {
+        "t": "Nitric oxide (NO)",
+        "via": "denitration in smooth muscle (mtALDH2)"
+      },
+      {
+        "t": "Activates guanylyl cyclase (binds its haem group)"
+      },
+      {
+        "t": "GTP → cGMP",
+        "side": {
+          "t": "PDE-5 breaks cGMP → GMP; sildenafil blocks PDE-5 (with nitrates: ↓↓ BP)",
+          "c": "r"
+        }
+      },
+      {
+        "t": "Myosin light chain dephosphorylated",
+        "via": "cGMP-dependent protein kinase"
+      },
+      {
+        "t": "Fewer actin–myosin cross-bridges; ↓ Ca²⁺ entry"
+      },
+      {
+        "t": "Smooth muscle relaxation → vasodilation",
+        "hl": "g"
+      }
+    ]
+  },
+  "ccb-moa": {
+    "kind": "flow",
+    "caption": "Calcium channel blockers: mechanism",
+    "src": {
+      "code": "BP503T",
+      "unit": 1,
+      "page": 9
+    },
+    "steps": [
+      {
+        "t": "L-type Ca²⁺ channels (vascular smooth muscle, heart)",
+        "side": {
+          "t": "✗ CCB blocks the channel",
+          "c": "r"
+        }
+      },
+      {
+        "t": "↓ Ca²⁺ entry into the cell"
+      },
+      {
+        "t": "Dihydropyridines (nifedipine, amlodipine): vascular smooth muscle relaxes",
+        "side": "vasodilation, ↓ afterload, ↓ BP",
+        "hl": "g"
+      },
+      {
+        "t": "Non-dihydropyridines (verapamil, diltiazem): also heart",
+        "side": "↓ heart rate, ↓ contractility, slower AV conduction",
+        "hl": "g"
+      }
+    ]
+  },
+  "shikimic-pathway": {
+    "kind": "flow",
+    "caption": "Shikimic acid pathway",
+    "src": {
+      "code": "BP504T",
+      "unit": 1,
+      "page": 5
+    },
+    "steps": [
+      {
+        "t": "Phosphoenolpyruvate (PEP) + erythrose-4-phosphate (E4P)",
+        "hl": "b"
+      },
+      {
+        "t": "DAHP",
+        "via": "DAHP synthase"
+      },
+      {
+        "t": "3-Dehydroquinic acid",
+        "via": "DHQ synthase"
+      },
+      {
+        "t": "3-Dehydroshikimic acid",
+        "via": "dehydroquinate dehydratase"
+      },
+      {
+        "t": "Shikimic acid",
+        "via": "shikimate dehydrogenase",
+        "bold": true
+      },
+      {
+        "t": "Shikimate-3-phosphate",
+        "via": "shikimate kinase"
+      },
+      {
+        "t": "EPSP",
+        "via": "EPSP synthase (glyphosate target)"
+      },
+      {
+        "t": "Chorismic acid (branch point)",
+        "via": "chorismate synthase",
+        "hl": "b"
+      }
+    ],
+    "fan": [
+      "Prephenate → Phe, Tyr",
+      "Anthranilate → Trp",
+      "Isochorismate → salicylic acid"
+    ]
+  },
+  "phenylpropanoid-pathway": {
+    "kind": "flow",
+    "caption": "Phenylpropanoid pathway",
+    "src": {
+      "code": "BP504T",
+      "unit": 1,
+      "page": 6
+    },
+    "steps": [
+      {
+        "t": "L-Phenylalanine",
+        "hl": "b"
+      },
+      {
+        "t": "trans-Cinnamic acid",
+        "via": "PAL (phenylalanine ammonia lyase)"
+      },
+      {
+        "t": "p-Coumaric acid",
+        "via": "cinnamate 4-hydroxylase (C4H)"
+      },
+      {
+        "t": "p-Coumaroyl-CoA (branch point)",
+        "via": "4-coumarate-CoA ligase (4CL)",
+        "hl": "b"
+      }
+    ],
+    "fan": [
+      "Monolignols → lignins, lignans",
+      "+ Malonyl-CoA → chalcones → flavonoids",
+      "Coumarins; caffeic, ferulic acid"
+    ]
+  },
+  "mva-pathway": {
+    "kind": "flow",
+    "caption": "Mevalonate (MVA) pathway",
+    "src": {
+      "code": "BP504T",
+      "unit": 1,
+      "page": 9
+    },
+    "steps": [
+      {
+        "t": "Acetyl-CoA (C2) × 2",
+        "hl": "b"
+      },
+      {
+        "t": "Acetoacetyl-CoA (C4)",
+        "via": "acetoacetyl-CoA thiolase"
+      },
+      {
+        "t": "HMG-CoA (C6)",
+        "via": "HMG-CoA synthase (+ acetyl-CoA)"
+      },
+      {
+        "t": "Mevalonic acid (C6)",
+        "via": "HMG-CoA reductase: rate-limiting; statins block",
+        "bold": true
+      },
+      {
+        "t": "Mevalonate-5-phosphate → 5-pyrophosphate",
+        "via": "mevalonate kinase; phosphomevalonate kinase"
+      },
+      {
+        "t": "IPP (C5) ⇌ DMAPP (C5)",
+        "via": "decarboxylase; IPP isomerase",
+        "hl": "b"
+      },
+      {
+        "t": "GPP (C10) → monoterpenes"
+      },
+      {
+        "t": "FPP (C15) → sesquiterpenes",
+        "via": "+ IPP"
+      },
+      {
+        "t": "Squalene (C30) → triterpenes, steroids",
+        "via": "FPP + FPP (squalene synthase)"
+      }
+    ]
+  },
+  "mep-pathway": {
+    "kind": "flow",
+    "caption": "MEP / DXP (non-mevalonate) pathway, in plastids",
+    "src": {
+      "code": "BP504T",
+      "unit": 1,
+      "page": 12
+    },
+    "steps": [
+      {
+        "t": "Pyruvate + glyceraldehyde-3-phosphate",
+        "hl": "b"
+      },
+      {
+        "t": "DXP (1-deoxy-D-xylulose-5-phosphate)",
+        "via": "DXP synthase (TPP)"
+      },
+      {
+        "t": "MEP (2-C-methyl-D-erythritol-4-phosphate)",
+        "via": "DXP reductoisomerase (fosmidomycin target)",
+        "bold": true
+      },
+      {
+        "t": "CDP-ME → CDP-ME2P → ME-cPP → HMBPP",
+        "via": "several steps"
+      },
+      {
+        "t": "IPP + DMAPP",
+        "via": "HMBPP reductase (IspH)",
+        "hl": "b"
+      }
+    ],
+    "fan": [
+      "GPP (C10) → monoterpenes",
+      "GGPP (C20) → diterpenes (taxol), carotenoids, phytol"
+    ]
+  },
+  "tropane-pathway": {
+    "kind": "flow",
+    "caption": "Ornithine → tropane alkaloids",
+    "src": {
+      "code": "BP504T",
+      "unit": 1,
+      "page": 15
+    },
+    "steps": [
+      {
+        "t": "L-Ornithine",
+        "hl": "b"
+      },
+      {
+        "t": "Putrescine",
+        "via": "ornithine decarboxylase"
+      },
+      {
+        "t": "N-Methylputrescine",
+        "via": "putrescine N-methyltransferase"
+      },
+      {
+        "t": "4-Methylaminobutanal",
+        "via": "methylputrescine oxidase"
+      },
+      {
+        "t": "N-Methyl-Δ¹-pyrrolinium cation (ring closure)"
+      },
+      {
+        "t": "Hygrine → tropinone",
+        "via": "+ acetoacetic acid"
+      },
+      {
+        "t": "Tropine",
+        "via": "tropinone reductase I"
+      },
+      {
+        "t": "(−)-Hyoscyamine",
+        "via": "+ tropic acid",
+        "bold": true
+      }
+    ],
+    "fan": [
+      "Racemises → (±)-atropine",
+      "Hyoscyamine 6β-hydroxylase → scopolamine (hyoscine)"
+    ]
+  },
+  "nppa-ceiling-price": {
+    "kind": "flow",
+    "caption": "Ceiling price calculation (DPCO 2013, NPPA)",
+    "src": {
+      "code": "BP505T",
+      "unit": 4,
+      "page": 17
+    },
+    "steps": [
+      {
+        "t": "Step 1: identify all brands of the scheduled formulation"
+      },
+      {
+        "t": "Step 2: find each brand's market share",
+        "side": "IMS / IQVIA data"
+      },
+      {
+        "t": "Step 3: shortlist brands with ≥ 1% market share"
+      },
+      {
+        "t": "Step 4: simple average price of shortlisted brands = ceiling price",
+        "hl": "b"
+      },
+      {
+        "t": "Step 5: add GST → maximum retail price (MRP)"
+      },
+      {
+        "t": "Step 6: NPPA notifies the ceiling price in the Official Gazette",
+        "side": "revised yearly by % change in WPI"
+      }
+    ]
+  },
+  "eugenol": {
+    "kind": "mols",
+    "caption": "Eugenol (clove)",
+    "src": {
+      "code": "BP504T",
+      "unit": 2,
+      "page": 14
+    },
+    "mols": [
+      {
+        "name": "Eugenol",
+        "formula": "C10H12O2"
+      }
+    ]
+  },
+  "barbaloin": {
+    "kind": "mols",
+    "caption": "Barbaloin (aloin, an anthrone C-glycoside of aloe)",
+    "src": {
+      "code": "BP504T",
+      "unit": 2,
+      "page": 25
+    },
+    "mols": [
+      {
+        "name": "Barbaloin (aloin)",
+        "pubchem": "aloin",
+        "formula": "C21H22O9",
+        "nostereo": true
+      }
+    ]
+  },
+  "podophyllotoxin": {
+    "kind": "mols",
+    "caption": "Podophyllotoxin: aryltetralin lactone lignan (methylenedioxy ring, trimethoxyphenyl, γ-butyrolactone)",
+    "src": {
+      "code": "BP504T",
+      "unit": 3,
+      "page": 19
+    },
+    "mols": [
+      {
+        "name": "Podophyllotoxin",
+        "formula": "C22H22O8"
+      }
+    ]
+  },
+  "caffeine": {
+    "kind": "mols",
+    "caption": "Caffeine (1,3,7-trimethylxanthine, purine alkaloid)",
+    "src": {
+      "code": "BP504T",
+      "unit": 4,
+      "page": 15
+    },
+    "mols": [
+      {
+        "name": "Caffeine",
+        "formula": "C8H10N4O2"
+      }
+    ]
+  },
+  "citral-isomers": {
+    "kind": "mols",
+    "caption": "Citral = geranial (citral-a, E) + neral (citral-b, Z), α,β-unsaturated aldehydes",
+    "src": {
+      "code": "BP504T",
+      "unit": 3,
+      "page": 5
+    },
+    "mols": [
+      {
+        "name": "Geranial (E, citral-a)",
+        "pubchem": "geranial",
+        "formula": "C10H16O"
+      },
+      {
+        "name": "Neral (Z, citral-b)",
+        "pubchem": "neral",
+        "formula": "C10H16O"
+      }
+    ]
+  },
+  "bcs": {
+    "kind": "svg",
+    "caption": "Biopharmaceutics Classification System (BCS)",
+    "src": {
+      "code": "BP502T",
+      "unit": 1,
+      "page": 16
+    }
+  },
+  "aerosol-can": {
+    "kind": "svg",
+    "caption": "Pharmaceutical aerosol container: cross-section",
+    "src": {
+      "code": "BP502T",
+      "unit": 5,
+      "page": 11
+    }
+  },
+  "coating-pan": {
+    "kind": "svg",
+    "caption": "Conventional coating pan",
+    "src": {
+      "code": "BP502T",
+      "unit": 2,
+      "page": 16
+    }
+  },
+  "tablet-qc-apparatus": {
+    "kind": "svg",
+    "caption": "Roche friabilator and disintegration (basket-rack) apparatus",
+    "src": {
+      "code": "BP502T",
+      "unit": 2,
+      "page": 23
+    }
+  },
+  "capsule-hard-soft": {
+    "kind": "svg",
+    "caption": "Hard vs soft gelatin capsule",
+    "src": {
+      "code": "BP502T",
+      "unit": 3,
+      "page": 3
+    }
+  },
+  "capsule-sizes": {
+    "kind": "svg",
+    "caption": "Hard gelatin capsule sizes 000–5 to scale, with fill volume in mL (Capsugel/Lonza nominal values)",
+    "src": {
+      "code": "BP502T",
+      "unit": 3,
+      "page": 4
+    }
+  },
+  "tablet-defects": {
+    "kind": "svg",
+    "caption": "Tablet processing defects",
+    "src": {
+      "code": "BP502T",
+      "unit": 2,
+      "page": 8
+    }
+  },
+  "cardiac-ap": {
+    "kind": "svg",
+    "caption": "Ventricular action potential: ion currents and antiarrhythmic classes",
+    "src": {
+      "code": "BP503T",
+      "unit": 1,
+      "page": 10
+    }
+  },
+  "nephron-diuretics": {
+    "kind": "svg",
+    "caption": "Sites of action of diuretics in the nephron",
+    "src": {
+      "code": "BP503T",
+      "unit": 2,
+      "page": 21
+    }
+  },
+  "coag-cascade": {
+    "kind": "svg",
+    "caption": "Coagulation cascade and sites of anticoagulant action",
+    "src": {
+      "code": "BP503T",
+      "unit": 2,
+      "page": 15
+    }
+  },
+  "eicosanoids": {
+    "kind": "svg",
+    "caption": "Arachidonic acid pathway: COX and LOX products",
+    "src": {
+      "code": "BP503T",
+      "unit": 3,
+      "page": 9
+    }
+  }
+}

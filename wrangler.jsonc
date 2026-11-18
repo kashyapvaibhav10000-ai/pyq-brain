@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pyq-brain",
+  "main": "src/index.tsx",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./public" },
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pyq-brain",
+      // Replace with id printed by `npx wrangler d1 create pyq-brain` before deploy.
+      "database_id": "370c2389-a11a-42a7-a5ba-9b2f44ff73e1",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [{ "binding": "BUCKET", "bucket_name": "pyq-brain-pages" }]
+}

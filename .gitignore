@@ -1,0 +1,30 @@
+# deps / build / local state
+node_modules
+.wrangler
+dist
+*.log
+
+# secrets (none used, but never commit if created)
+.dev.vars
+.env
+.env.*
+
+# OCR model (33 MB, download separately)
+.tessdata
+
+# Noteskart notes + anything derived from them (personal study copies, never public)
+noteskart
+*.pdf
+data/*.sql
+data/pending/
+
+# Python dev venv / caches
+.venv
+venv
+__pycache__
+*.pyc
+
+# editor / OS
+.vscode
+.idea
+.DS_Store

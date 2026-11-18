@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 360" width="440" height="360" role="img" aria-label="Metformin enters the liver cell by OCT1, inhibits complex I and mGPD, raising AMP to ATP ratio and activating AMPK, lowering gluconeogenesis">
+<style>:root{--i:#2a2420;--a:#c2412d;--b:#2c4f9e;--p:#f8f5ee;--g:#3b7a4b}@media (prefers-color-scheme:dark){:root{--i:#ece4d6;--a:#ff917c;--b:#9fb8f2;--p:#26231f;--g:#86cf98}}
+text{font-family:"Helvetica Neue",Arial,sans-serif;fill:var(--i);font-size:12.5px}.b{font-weight:700}.s{font-size:11px}.r{fill:var(--a)}.y{fill:var(--b)}.g{fill:var(--g)}
+.l{stroke:var(--i);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}.t{stroke:var(--a);stroke-width:2;fill:none;stroke-linecap:round}</style>
+<defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="var(--i)" stroke-width="1.6"/></marker></defs>
+<!-- hepatocyte membrane + OCT1 -->
+<path d="M10 40 H430" class="l" stroke-width="2.4"/><text x="430" y="32" text-anchor="end" class="s">liver cell membrane</text>
+<rect x="152" y="26" width="24" height="28" rx="5" class="l" style="fill:var(--p)" stroke-width="2"/><text x="148" y="20" text-anchor="end" class="y b">OCT1</text>
+<path d="M164 10 V70" class="l" marker-end="url(#h)"/>
+<rect x="114" y="74" width="100" height="26" rx="6" class="l" stroke-width="2"/><text x="164" y="92" text-anchor="middle" class="b">Metformin</text>
+<!-- mitochondrion -->
+<ellipse cx="200" cy="168" rx="185" ry="56" class="l" stroke-width="2" stroke-dasharray="7 4"/><text x="40" y="206" class="s">Mitochondrion</text>
+<path d="M140 100 C126 116 112 128 104 142" class="t"/><path d="M95 142 H113" class="t"/>
+<path d="M188 100 C216 116 240 128 252 142" class="t"/><path d="M243 142 H261" class="t"/>
+<text x="104" y="160" text-anchor="middle" class="b">Complex I</text><text x="104" y="176" text-anchor="middle" class="s">NADH → NAD⁺</text>
+<text x="252" y="160" text-anchor="middle" class="b">mGPD</text><text x="252" y="176" text-anchor="middle" class="s">FAD → FADH₂</text>
+<text x="200" y="208" text-anchor="middle" class="b">↑ [AMP/ADP] : [ATP]</text>
+<path d="M112 182 C130 196 150 200 160 202" class="l"/>
+<!-- mGPD effect -->
+<path d="M290 168 H316" class="l" stroke-dasharray="4 3" marker-end="url(#h)"/>
+<text x="320" y="160" class="s">↑ cytosolic redox</text><text x="320" y="176" class="s g b">↓ gluconeogenesis</text>
+<!-- AMPK / AMP -->
+<path d="M180 214 C150 236 120 246 100 256" class="l" marker-end="url(#h)"/>
+<path d="M220 214 C250 236 280 246 300 256" class="l" marker-end="url(#h)"/>
+<text x="90" y="274" text-anchor="middle" class="b">↑ AMPK</text>
+<text x="310" y="274" text-anchor="middle" class="b">↑ AMP</text>
+<rect x="18" y="282" width="150" height="72" rx="6" class="l"/>
+<text x="26" y="298" class="s">glucose metabolism</text><text x="26" y="312" class="s">lipid metabolism</text>
+<text x="26" y="326" class="s">anti-inflammation</text><text x="26" y="340" class="s">redox regulation, anti-ageing</text>
+<rect x="240" y="282" width="140" height="40" rx="6" class="l"/>
+<text x="248" y="298" class="s">glucose metabolism</text><text x="248" y="312" class="s">lipid metabolism</text>
+<path d="M330 345 h18" class="t"/><text x="352" y="349" class="s r">= inhibition</text>
+</svg>

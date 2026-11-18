@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 92 129" width="92" height="129" role="img" aria-label="Mercaptopurine (6-MP, purine antimetabolite)"><style>:root{--i:#2a2420;--a:#c2412d;--b:#2c4f9e;--g:#3b7a4b}@media (prefers-color-scheme:dark){:root{--i:#ece4d6;--a:#ff917c;--b:#9fb8f2;--g:#86cf98}}text{font-family:"Helvetica Neue",Arial,sans-serif;fill:var(--i)}</style><svg x="0.0" y="0.0" width="76.0" height="87.0" viewBox="0 0 76.0 87.0" overflow="visible">
+
+<path class='bond-0 atom-0 atom-1' d='M 4.6,48.4 L 12.4,59.2' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0 atom-0 atom-1' d='M 8.1,48.4 L 14.8,57.5' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-1 atom-2' d='M 19.6,62.7 L 34.2,58.0' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-2 atom-3' d='M 34.2,58.0 L 34.1,38.7' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-2 atom-3' d='M 31.3,55.9 L 31.3,40.8' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3 atom-3 atom-4' d='M 34.1,38.7 L 19.6,34.0' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-4 atom-3 atom-5' d='M 34.1,38.7 L 50.8,29.1' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-5 atom-5 atom-6' d='M 52.2,29.9 L 52.2,14.8' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-5 atom-5 atom-6' d='M 49.4,29.9 L 49.3,14.8' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-6 atom-5 atom-7' d='M 50.8,29.1 L 63.7,36.6' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-7 atom-7 atom-8' d='M 67.5,43.4 L 67.5,57.9' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-7 atom-7 atom-8' d='M 64.6,43.4 L 64.6,56.3' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-8 atom-8 atom-9' d='M 67.5,57.9 L 54.6,65.4' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-9 atom-4 atom-0' d='M 12.4,37.5 L 4.6,48.4' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-10 atom-9 atom-2' d='M 47.1,65.4 L 34.2,58.0' style='fill:none;fill-rule:evenodd;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path d='M 5.0,48.9 L 4.6,48.4 L 5.0,47.8' style='fill:none;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path d='M 50.0,29.6 L 50.8,29.1 L 51.4,29.5' style='fill:none;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path d='M 67.5,57.2 L 67.5,57.9 L 66.8,58.3' style='fill:none;stroke:var(--i);stroke-width:1.4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />
+<path class='atom-1' d='M 14.1 59.8
+L 16.7 64.2
+Q 17.0 64.6, 17.4 65.4
+Q 17.9 66.1, 17.9 66.2
+L 17.9 59.8
+L 19.0 59.8
+L 19.0 68.0
+L 17.9 68.0
+L 15.0 63.3
+Q 14.6 62.7, 14.3 62.1
+Q 13.9 61.5, 13.8 61.3
+L 13.8 68.0
+L 12.8 68.0
+L 12.8 59.8
+L 14.1 59.8
+' fill='var(--i)'/>
+<path class='atom-4' d='M 14.0 28.7
+L 16.7 33.0
+Q 17.0 33.5, 17.4 34.2
+Q 17.8 35.0, 17.9 35.1
+L 17.9 28.7
+L 19.0 28.7
+L 19.0 36.9
+L 17.8 36.9
+L 15.0 32.2
+Q 14.6 31.6, 14.3 31.0
+Q 13.9 30.3, 13.8 30.1
+L 13.8 36.9
+L 12.8 36.9
+L 12.8 28.7
+L 14.0 28.7
+' fill='var(--i)'/>
+<path class='atom-4' d='M 12.7 19.7
+L 13.8 19.7
+L 13.8 23.2
+L 17.9 23.2
+L 17.9 19.7
+L 19.1 19.7
+L 19.1 27.9
+L 17.9 27.9
+L 17.9 24.1
+L 13.8 24.1
+L 13.8 27.9
+L 12.7 27.9
+L 12.7 19.7
+' fill='var(--i)'/>
+<path class='atom-6' d='M 48.5 12.7
+Q 48.6 12.7, 48.9 12.9
+Q 49.3 13.0, 49.7 13.1
+Q 50.2 13.2, 50.6 13.2
+Q 51.4 13.2, 51.8 12.9
+Q 52.3 12.5, 52.3 11.8
+Q 52.3 11.4, 52.0 11.1
+Q 51.8 10.8, 51.5 10.7
+Q 51.1 10.5, 50.5 10.3
+Q 49.8 10.1, 49.4 9.9
+Q 48.9 9.7, 48.6 9.3
+Q 48.3 8.8, 48.3 8.1
+Q 48.3 7.1, 49.0 6.4
+Q 49.7 5.8, 51.1 5.8
+Q 52.1 5.8, 53.1 6.2
+L 52.9 7.1
+Q 51.9 6.7, 51.2 6.7
+Q 50.4 6.7, 49.9 7.1
+Q 49.5 7.4, 49.5 8.0
+Q 49.5 8.4, 49.7 8.7
+Q 49.9 8.9, 50.3 9.1
+Q 50.6 9.2, 51.2 9.4
+Q 51.9 9.6, 52.3 9.9
+Q 52.8 10.1, 53.1 10.6
+Q 53.4 11.0, 53.4 11.8
+Q 53.4 13.0, 52.6 13.6
+Q 51.9 14.2, 50.6 14.2
+Q 49.9 14.2, 49.4 14.0
+Q 48.8 13.9, 48.2 13.6
+L 48.5 12.7
+' fill='var(--i)'/>
+<path class='atom-7' d='M 65.7 34.6
+L 68.3 39.0
+Q 68.6 39.4, 69.0 40.2
+Q 69.5 40.9, 69.5 41.0
+L 69.5 34.6
+L 70.6 34.6
+L 70.6 42.8
+L 69.4 42.8
+L 66.6 38.1
+Q 66.2 37.5, 65.9 36.9
+Q 65.5 36.2, 65.4 36.0
+L 65.4 42.8
+L 64.4 42.8
+L 64.4 34.6
+L 65.7 34.6
+' fill='var(--i)'/>
+<path class='atom-9' d='M 49.0 63.5
+L 51.7 67.8
+Q 52.0 68.2, 52.4 69.0
+Q 52.8 69.8, 52.8 69.8
+L 52.8 63.5
+L 53.9 63.5
+L 53.9 71.7
+L 52.8 71.7
+L 49.9 66.9
+Q 49.6 66.4, 49.2 65.7
+Q 48.9 65.1, 48.8 64.9
+L 48.8 71.7
+L 47.7 71.7
+L 47.7 63.5
+L 49.0 63.5
+' fill='var(--i)'/>
+<path class='atom-9' d='M 47.6 72.5
+L 48.7 72.5
+L 48.7 75.9
+L 52.9 75.9
+L 52.9 72.5
+L 54.0 72.5
+L 54.0 80.6
+L 52.9 80.6
+L 52.9 76.9
+L 48.7 76.9
+L 48.7 80.6
+L 47.6 80.6
+L 47.6 72.5
+' fill='var(--i)'/>
+</svg><text x="38.0" y="103.0" font-size="12" text-anchor="middle">Mercaptopurine</text></svg>

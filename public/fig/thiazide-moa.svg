@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" width="460" height="270" role="img" aria-label="Thiazides block the sodium chloride cotransporter on the lumen side of the distal convoluted tubule cell">
+<style>:root{--i:#2a2420;--a:#c2412d;--b:#2c4f9e;--p:#f8f5ee}@media (prefers-color-scheme:dark){:root{--i:#ece4d6;--a:#ff917c;--b:#9fb8f2;--p:#26231f}}
+text{font-family:"Helvetica Neue",Arial,sans-serif;fill:var(--i);font-size:12.5px}.b{font-weight:700}.s{font-size:11px}.r{fill:var(--a)}.y{fill:var(--b)}
+.l{stroke:var(--i);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}</style>
+<defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="var(--i)" stroke-width="1.6"/></marker></defs>
+<text x="55" y="20" text-anchor="middle" class="b">Tubule lumen</text>
+<text x="230" y="20" text-anchor="middle" class="b">DCT cell</text>
+<text x="405" y="20" text-anchor="middle" class="b">Blood</text>
+<rect x="135" y="34" width="190" height="180" rx="10" class="l" stroke-width="2.2"/>
+<!-- apical NCC -->
+<ellipse cx="135" cy="104" rx="10" ry="22" class="l" style="fill:var(--p)" stroke-width="2"/>
+<text x="150" y="70" class="y s">Na⁺Cl⁻ cotransporter (NCC)</text>
+<path d="M40 92 H123" class="l" marker-end="url(#h)"/><text x="18" y="96" class="b">Na⁺</text>
+<path d="M40 116 H123" class="l" marker-end="url(#h)"/><text x="18" y="120" class="b">Cl⁻</text>
+<path d="M147 92 C175 92 195 100 215 110" class="l" marker-end="url(#h)"/>
+<path d="M147 116 C175 118 205 150 300 168" class="l" marker-end="url(#h)"/>
+<!-- thiazide -->
+<text x="18" y="168" class="r b">Thiazide</text><text x="18" y="182" class="r s">(chlorothiazide)</text>
+<path d="M60 156 C92 150 112 138 126 126" class="l" style="stroke:var(--a)"/>
+<path d="M118 96 L134 112 M134 96 L118 112" class="l" style="stroke:var(--a);stroke-width:2.8"/>
+<!-- basolateral Na/K ATPase -->
+<circle cx="325" cy="114" r="17" class="l" stroke-width="2" style="fill:var(--p)"/>
+<text x="325" y="117" text-anchor="middle" font-size="8.5" class="b">Na⁺/K⁺</text>
+<text x="226" y="114" class="b">Na⁺</text>
+<path d="M250 110 C280 108 300 108 310 110" class="l"/>
+<path d="M340 110 H390" class="l" marker-end="url(#h)"/><text x="396" y="114" class="b">Na⁺</text>
+<path d="M392 132 C370 134 352 130 338 124" class="l" marker-end="url(#h)"/><text x="396" y="136" class="b">K⁺</text>
+<text x="325" y="148" text-anchor="middle" class="s">Na⁺/K⁺-ATPase</text>
+<!-- Cl channel -->
+<rect x="319" y="160" width="12" height="18" rx="3" class="l" style="fill:var(--p)"/>
+<path d="M331 170 H390" class="l" marker-end="url(#h)"/><text x="396" y="174" class="b">Cl⁻</text>
+<text x="230" y="250" text-anchor="middle" class="r s">NCC blocked → NaCl stays in the lumen → ↑ Na⁺, Cl⁻ and water in urine (diuresis)</text>
+</svg>

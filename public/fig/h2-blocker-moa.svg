@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 290" width="470" height="290" role="img" aria-label="H2-antagonists block histamine at the parietal cell, so less H+ (acid) is pumped into the stomach">
+<style>:root{--i:#2a2420;--a:#c2412d;--b:#2c4f9e;--p:#f8f5ee}@media (prefers-color-scheme:dark){:root{--i:#ece4d6;--a:#ff917c;--b:#9fb8f2;--p:#26231f}}
+text{font-family:"Helvetica Neue",Arial,sans-serif;fill:var(--i);font-size:12.5px}.b{font-weight:700}.y{fill:var(--b)}.r{fill:var(--a)}.s{font-size:11px}
+.l{stroke:var(--i);stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}</style>
+<defs><marker id="h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="var(--i)" stroke-width="1.6"/></marker>
+<marker id="hr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="var(--a)" stroke-width="1.6"/></marker></defs>
+<!-- blood side labels -->
+<text x="6" y="22" class="s">Blood side</text>
+<text x="466" y="22" class="s" text-anchor="end">Stomach lumen</text>
+<!-- cell -->
+<rect x="130" y="44" width="210" height="190" rx="24" class="l" stroke-width="2.2"/>
+<text x="235" y="36" text-anchor="middle" class="b">PARIETAL CELL</text>
+<!-- receptors on blood-side membrane -->
+<rect x="123" y="70" width="14" height="28" rx="4" class="l" fill="var(--p)" style="fill:var(--p)"/>
+<rect x="123" y="132" width="14" height="22" rx="7" class="l" style="fill:var(--p)"/>
+<rect x="123" y="184" width="14" height="24" rx="7" class="l" style="fill:var(--p)"/>
+<!-- ligands -->
+<text x="6" y="88" class="b">Histamine</text><path d="M70 84 H117" class="l" marker-end="url(#h)"/>
+<text x="148" y="112" class="y s">H₂ receptor</text>
+<text x="6" y="147">Gastrin</text><path d="M54 143 H117" class="l" marker-end="url(#h)"/>
+<text x="6" y="200">ACh</text><path d="M36 196 H117" class="l" marker-end="url(#h)"/>
+<!-- H2 blocker -->
+<text x="6" y="252" class="r b">H₂-antagonist</text><text x="6" y="266" class="r s">cimetidine, famotidine, ranitidine</text>
+<path d="M60 240 C70 200 92 130 112 100" class="l" style="stroke:var(--a)" marker-end="url(#hr)"/>
+<path d="M88 76 L104 92 M104 76 L88 92" class="l" style="stroke:var(--a);stroke-width:2.8"/>
+<!-- second messengers -->
+<text x="180" y="70">ATP</text><path d="M192 74 C192 84 196 90 202 94" class="l" marker-end="url(#h)"/>
+<path d="M137 84 C160 84 180 92 198 98" class="l" stroke-dasharray="3 3"/>
+<text x="204" y="104" class="b">cAMP</text>
+<path d="M137 143 C160 146 172 158 186 168" class="l" marker-end="url(#h)"/>
+<path d="M137 196 C160 192 172 184 186 176" class="l" marker-end="url(#h)"/>
+<text x="190" y="176" class="b">Ca²⁺</text>
+<path d="M244 102 C268 108 288 124 310 138" class="l" marker-end="url(#h)"/>
+<path d="M226 172 C258 168 286 158 310 150" class="l" marker-end="url(#h)"/>
+<!-- proton pump on lumen-side membrane -->
+<circle cx="340" cy="144" r="19" class="l" stroke-width="2.2" style="fill:var(--p)"/>
+<text x="340" y="148" text-anchor="middle" font-size="10" class="b">H⁺/K⁺</text>
+<text x="300" y="206" text-anchor="middle" class="s">H⁺/K⁺-ATPase</text>
+<text x="300" y="220" text-anchor="middle" class="s">(proton pump)</text>
+<path d="M430 104 C400 104 376 112 356 128" class="l" marker-end="url(#h)"/><text x="436" y="108" class="b">K⁺</text>
+<path d="M359 148 C390 152 408 156 430 160" class="l" marker-end="url(#h)"/><text x="436" y="164" class="b">H⁺</text>
+<text x="436" y="180" class="s">(acid)</text>
+<text x="300" y="282" text-anchor="middle" class="r s">Blocked H₂ receptor → ↓ cAMP → ↓ proton pump → ↓ gastric acid</text>
+</svg>
