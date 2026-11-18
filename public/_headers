@@ -1,0 +1,9 @@
+# Workers Assets: headers for static files (they bypass the Worker). Not served itself.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: same-origin
+
+# Figures open full-size in a new tab: an SVG may never run script or load anything external.
+/fig/*
+  Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:

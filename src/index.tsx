@@ -3,6 +3,7 @@ import type { Context } from 'hono';
 import { deleteCookie, getSignedCookie, setSignedCookie } from 'hono/cookie';
 import { csrf } from 'hono/csrf';
 import { html } from 'hono/html';
+import { HTTPException } from 'hono/http-exception';
 import syllabusJson from '../data/syllabus.json';
 import {
   DEFAULT_OPENAI_BASE,
@@ -99,6 +100,16 @@ function setSession(c: Context, secret: string) {
   return setSignedCookie(c, COOKIE, 'me', secret, { httpOnly: true, secure: true, sameSite: 'Lax', path: '/', maxAge: 60 * 60 * 24 * 60 });
 }
 
+// Security headers on every Worker response (static files get theirs from public/_headers).
+// Referrer-Policy must keep same-origin Origin headers: csrf() rejects `Origin: null` (which "no-referrer" would send).
+app.use('*', async (c, next) => {
+  await next();
+  c.header('X-Frame-Options', 'DENY');
+  c.header('Content-Security-Policy', "frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'");
+  c.header('X-Content-Type-Options', 'nosniff');
+  c.header('Referrer-Policy', 'same-origin');
+  c.header('Strict-Transport-Security', 'max-age=31536000');
+});
 app.use(csrf());
 app.use('*', async (c, next) => {
   c.set('app', (await readSettings(c.env.DB, APP_SCOPE)) as AppSettings);
@@ -120,12 +131,56 @@ app.post('/setup', async (c) => {
   return c.redirect('/settings?saved=setup');
 });
 
+// Login brute-force limit, kept in D1 `settings` under user_id '_login' (k = 'ip:<addr>' or '*' for all IPs).
+// v = wrong tries, updated_at = start of the current window. Already-logged-in devices are never affected.
+const LOGIN_SCOPE = '_login';
+const LOGIN_MAX_PER_IP = 5;
+const LOGIN_MAX_TOTAL = 30;
+const LOGIN_WINDOW = '-15 minutes';
+function clientKey(c: Context) {
+  const ip = c.req.header('cf-connecting-ip') ?? 'unknown';
+  return `ip:${ip.includes(':') ? ip.split(':').slice(0, 4).join(':') : ip}`; // IPv6: one /64 = one client
+}
+async function loginBlocked(db: D1Database, key: string) {
+  const rows = (
+    await db
+      .prepare(`SELECT k, v FROM settings WHERE user_id = ? AND k IN (?, '*') AND updated_at > datetime('now', ?)`)
+      .bind(LOGIN_SCOPE, key, LOGIN_WINDOW)
+      .all<{ k: string; v: string }>()
+  ).results;
+  return rows.some((r) => Number(r.v) >= (r.k === '*' ? LOGIN_MAX_TOTAL : LOGIN_MAX_PER_IP));
+}
+function recordLoginFail(db: D1Database, key: string) {
+  const bump = db.prepare(
+    `INSERT INTO settings (user_id, k, v, updated_at) VALUES (?1, ?2, '1', datetime('now'))
+     ON CONFLICT(user_id, k) DO UPDATE SET
+       v = CASE WHEN settings.updated_at > datetime('now', ?3) THEN CAST(settings.v AS INTEGER) + 1 ELSE 1 END,
+       updated_at = CASE WHEN settings.updated_at > datetime('now', ?3) THEN settings.updated_at ELSE datetime('now') END`,
+  );
+  return db.batch([
+    bump.bind(LOGIN_SCOPE, key, LOGIN_WINDOW),
+    bump.bind(LOGIN_SCOPE, '*', LOGIN_WINDOW),
+    db.prepare(`DELETE FROM settings WHERE user_id = ? AND updated_at <= datetime('now', '-1 day')`).bind(LOGIN_SCOPE),
+  ]);
+}
+const LOCKED = 'Too many wrong tries. Wait 15 minutes and try again.';
+
 app.get('/login', (c) => (c.var.app.passcode_hash ? page(c, <LoginPage />) : c.redirect('/setup')));
 app.post('/login', async (c) => {
   const a = c.var.app;
   if (!a.passcode_hash || !a.session_secret) return c.redirect('/setup');
+  const db = c.env.DB;
+  const key = clientKey(c);
+  if (await loginBlocked(db, key)) {
+    c.status(429);
+    return page(c, <LoginPage error={LOCKED} />);
+  }
   const form = await c.req.parseBody();
-  if (!(await passcodeMatches(a, String(form.passcode ?? '')))) return page(c, <LoginPage error />);
+  if (!(await passcodeMatches(a, String(form.passcode ?? '')))) {
+    await recordLoginFail(db, key);
+    return page(c, <LoginPage error="Wrong passcode." />);
+  }
+  await db.prepare('DELETE FROM settings WHERE user_id = ? AND k = ?').bind(LOGIN_SCOPE, key).run();
   await setSession(c, a.session_secret);
   return c.redirect('/');
 });
@@ -168,7 +223,7 @@ async function settingsView(c: Context<App>, flash?: { ok?: string; error?: stri
 const SAVED: Record<string, string> = {
   setup: 'Passcode set. Now add your AI provider and key below.',
   ai: 'AI settings saved.',
-  passcode: 'Passcode changed.',
+  passcode: 'Passcode changed. All other devices are logged out.',
   session: 'Session secret rotated. All other devices are logged out.',
 };
 app.get('/design', (c) => page(c, <DesignPage />));
@@ -207,7 +262,10 @@ app.post('/settings/passcode', async (c) => {
   if (pass.length < MIN_PASSCODE || pass !== String(f.confirm ?? ''))
     return settingsView(c, { error: `New passcode must be at least ${MIN_PASSCODE} characters and both fields must match.` });
   const salt = randomHex(16);
-  await writeSettings(c.env.DB, APP_SCOPE, { passcode_salt: salt, passcode_hash: await hashPasscode(pass, salt) });
+  // New passcode also rotates the session secret: anyone holding an old cookie (stolen/forgotten device) is logged out.
+  const secret = randomHex(32);
+  await writeSettings(c.env.DB, APP_SCOPE, { passcode_salt: salt, passcode_hash: await hashPasscode(pass, salt), session_secret: secret });
+  await setSession(c, secret); // keep this device logged in
   return c.redirect('/settings?saved=passcode');
 });
 
@@ -526,7 +584,9 @@ app.get('/priority/:code/print', async (c) => {
 });
 
 export function csvCell(v: unknown): string {
-  const s = v === null || v === undefined ? '' : String(v);
+  let s = v === null || v === undefined ? '' : String(v);
+  // CSV/formula injection: a cell starting = + - @ (OCR'd text) would run as a formula in Excel/Sheets. Numbers stay numbers.
+  if (/^[=+\-@\t\r]/.test(s) && !/^-?\d+(\.\d+)?$/.test(s)) s = `'${s}`;
   return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
@@ -627,6 +687,7 @@ app.get('/notes-page/:code/:unit/:page', async (c) => {
 
 // Any uncaught error (e.g. D1 free-tier daily read limit) → a readable page instead of a bare 500. Uses no DB.
 app.onError((err, c) => {
+  if (err instanceof HTTPException) return err.getResponse(); // e.g. csrf() 403: not an outage
   const msg = String((err as Error)?.message ?? err);
   const limit = /limit|exceeded|7500/i.test(msg);
   console.error('unhandled', msg);

@@ -184,12 +184,12 @@ export function SubjectPicker(props: { syllabus: Syllabus; base: string; current
   );
 }
 
-export function LoginPage(props: { error?: boolean }) {
+export function LoginPage(props: { error?: string }) {
   return (
     <Layout title="Login" bare>
       <form method="post" action="/login" class="card narrow">
         <h1>PYQ Brain</h1>
-        {props.error && <p class="err">Wrong passcode.</p>}
+        {props.error && <p class="err">{props.error}</p>}
         <label>
           Passcode
           <input type="password" name="passcode" autofocus required autocomplete="current-password" />
@@ -560,8 +560,9 @@ export function groupMarks(g: GroupRow): number[] {
 
 export function Filters(props: { units: (number | null)[]; marks: number[][] }) {
   const count = <T,>(xs: T[]) => xs.reduce((m, x) => m.set(x, (m.get(x) ?? 0) + 1), new Map<T, number>());
-  const uc = count(props.units.map((u) => u ?? 0));
-  const mc = count(props.marks.flat());
+  // Values go into a <style> block: integers only (defence in depth, DB columns are not type-enforced).
+  const uc = count(props.units.map((u) => u ?? 0).filter((u) => Number.isInteger(u)));
+  const mc = count(props.marks.flat().filter((m) => Number.isInteger(m)));
   const units = [...uc.keys()].sort((a, b) => (a || 9) - (b || 9));
   const marks = [...mc.keys()].sort((a, b) => a - b);
   const css = [
