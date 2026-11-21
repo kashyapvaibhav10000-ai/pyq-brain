@@ -8,6 +8,7 @@ import syllabusJson from '../data/syllabus.json';
 import {
   DEFAULT_OPENAI_BASE,
   PROVIDERS,
+  aiHost,
   extractPage,
   groupQuestions,
   notesQuery,
@@ -27,6 +28,7 @@ import {
   Layout,
   DesignPage,
   LoginPage,
+  INLINE_SCRIPTS,
   PaperList,
   PriorityPage,
   CardsPage,
@@ -97,7 +99,24 @@ async function passcodeMatches(a: AppSettings, passcode: string) {
   return got.length === want.length && crypto.subtle.timingSafeEqual(got, want);
 }
 function setSession(c: Context, secret: string) {
-  return setSignedCookie(c, COOKIE, 'me', secret, { httpOnly: true, secure: true, sameSite: 'Lax', path: '/', maxAge: 60 * 60 * 24 * 60 });
+  // prefix 'host' → cookie is named __Host-pyq_session: browser enforces Secure, Path=/, no Domain (no subdomain cookie injection).
+  return setSignedCookie(c, COOKIE, 'me', secret, { httpOnly: true, secure: true, sameSite: 'Lax', path: '/', maxAge: 60 * 60 * 24 * 60, prefix: 'host' });
+}
+
+// CSP: only our own scripts, pdf.js (upload page), and the inline scripts in views.tsx (by hash, computed once per isolate).
+const PDFJS_SRC = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@6.5.438/';
+let cspValue: Promise<string> | undefined;
+async function sha256b64(s: string) {
+  const d = new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)));
+  return btoa(String.fromCharCode(...d));
+}
+export function contentSecurityPolicy() {
+  cspValue ??= Promise.all(INLINE_SCRIPTS.map(sha256b64)).then(
+    (h) =>
+      `script-src 'self' ${PDFJS_SRC} 'wasm-unsafe-eval' ${h.map((x) => `'sha256-${x}'`).join(' ')}; worker-src 'self' blob: ${PDFJS_SRC}; ` +
+      "frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'",
+  );
+  return cspValue;
 }
 
 // Security headers on every Worker response (static files get theirs from public/_headers).
@@ -105,7 +124,7 @@ function setSession(c: Context, secret: string) {
 app.use('*', async (c, next) => {
   await next();
   c.header('X-Frame-Options', 'DENY');
-  c.header('Content-Security-Policy', "frame-ancestors 'none'; base-uri 'self'; object-src 'none'; form-action 'self'");
+  c.header('Content-Security-Policy', await contentSecurityPolicy());
   c.header('X-Content-Type-Options', 'nosniff');
   c.header('Referrer-Policy', 'same-origin');
   c.header('Strict-Transport-Security', 'max-age=31536000');
@@ -185,7 +204,8 @@ app.post('/login', async (c) => {
   return c.redirect('/');
 });
 app.get('/logout', (c) => {
-  deleteCookie(c, COOKIE, { path: '/' });
+  deleteCookie(c, COOKIE, { path: '/', secure: true, prefix: 'host' });
+  deleteCookie(c, COOKIE, { path: '/' }); // pre-__Host- cookie name
   c.header('Clear-Site-Data', '"cache", "storage"'); // drop offline answer copies on this device
   return c.redirect('/login');
 });
@@ -193,7 +213,7 @@ app.get('/logout', (c) => {
 app.use('*', async (c, next) => {
   const a = c.var.app;
   if (!a.passcode_hash || !a.session_secret) return c.req.method === 'GET' ? c.redirect('/setup') : c.text('Not set up', 401);
-  const uid = await getSignedCookie(c, a.session_secret, COOKIE);
+  const uid = await getSignedCookie(c, a.session_secret, COOKIE, 'host');
   if (!uid) {
     if (c.req.method === 'GET') return c.redirect('/login');
     return c.text('Not logged in', 401);
@@ -235,11 +255,19 @@ app.post('/settings/ai', async (c) => {
   if (!(provider in PROVIDERS)) return settingsView(c, { error: 'Unknown provider.' });
   const model = String(f.model ?? '').trim() || PROVIDERS[provider as Provider].defaultModel;
   if (!model) return settingsView(c, { error: 'Model id is required for this provider.' });
-  const baseUrl = String(f.base_url ?? '').trim();
-  if (baseUrl && !/^https:\/\//.test(baseUrl)) return settingsView(c, { error: 'Base URL must start with https://' });
-  const kv: Record<string, string> = { ai_provider: provider, ai_model: model.slice(0, 200), ai_base_url: baseUrl.slice(0, 300) };
+  const baseUrl = provider === 'openai' ? String(f.base_url ?? '').trim().slice(0, 300) : '';
+  const host = aiHost(provider, baseUrl);
+  if (!host) return settingsView(c, { error: 'Base URL must be a valid https:// URL.' });
+  const kv: Record<string, string> = { ai_provider: provider, ai_model: model.slice(0, 200), ai_base_url: baseUrl };
   const key = String(f.api_key ?? '').trim();
   if (key) kv.ai_key = key.slice(0, 500); // blank = keep current key
+  else {
+    // A saved key only ever goes to the host it was entered for: changing provider/Base URL needs the key again,
+    // so a stolen session cannot redirect the stored key to its own server.
+    const s = await readSettings(c.env.DB, c.var.userId);
+    if (s.ai_key && aiHost(s.ai_provider ?? '', s.ai_base_url ?? '') !== host)
+      return settingsView(c, { error: 'Re-enter the API key when you change provider or Base URL.' });
+  }
   await writeSettings(c.env.DB, c.var.userId, kv);
   return c.redirect('/settings?saved=ai');
 });
@@ -404,7 +432,7 @@ app.patch('/questions/:id', async (c) => {
   const q = await c.env.DB.prepare('SELECT * FROM questions WHERE id = ? AND user_id = ?').bind(id, uid).first<QuestionRow & { subject_code: string; group_id: number | null }>();
   if (!q) return c.body(null, 404);
   const f = await c.req.parseBody();
-  const text = String(f.clean_text ?? '').trim() || q.clean_text;
+  const text = String(f.clean_text ?? '').trim().slice(0, 4000) || q.clean_text;
   const marksN = f.marks === '' || f.marks === undefined ? null : Number(f.marks);
   const marks = marksN !== null && Number.isInteger(marksN) && marksN >= 0 && marksN <= 100 ? marksN : null;
   let unit: number | null = [1, 2, 3, 4, 5].includes(Number(f.unit)) ? Number(f.unit) : null;
@@ -674,13 +702,17 @@ app.get('/priority/:code/csv', async (c) => {
   });
 });
 
+/** R2 key of a notes page, or null unless subject is known and unit 1-5, page 1-500 are plain integers (no traversal). */
+export function notesKey(code: string, unit: string, page: string) {
+  if (!subjectOr404(code) || !/^[1-5]$/.test(unit) || !/^[1-9]\d{0,2}$/.test(page) || Number(page) > 500) return null;
+  return `notes/${code}/U${unit}/p${page}.jpg`;
+}
+
 // Original notes page images (student's own notes, private R2, behind login): figures link here as "original notes".
 app.get('/notes-page/:code/:unit/:page', async (c) => {
-  const code = subjectOr404(c.req.param('code'));
-  const unit = Number(c.req.param('unit'));
-  const pg = Number(c.req.param('page'));
-  if (!code || !Number.isInteger(unit) || unit < 1 || unit > 5 || !Number.isInteger(pg) || pg < 1 || pg > 500) return c.notFound();
-  const obj = await c.env.BUCKET.get(`notes/${code}/U${unit}/p${pg}.jpg`);
+  const key = notesKey(c.req.param('code'), c.req.param('unit'), c.req.param('page'));
+  if (!key) return c.notFound();
+  const obj = await c.env.BUCKET.get(key);
   if (!obj) return c.text('This notes page is not uploaded yet.', 404);
   return c.body(obj.body, 200, { 'content-type': 'image/jpeg', 'cache-control': 'private, max-age=604800' });
 });

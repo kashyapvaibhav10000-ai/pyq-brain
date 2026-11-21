@@ -15,6 +15,18 @@ export type Provider = keyof typeof PROVIDERS;
 export type AiConfig = { provider: Provider; model: string; apiKey: string; baseUrl: string };
 export const DEFAULT_OPENAI_BASE = 'https://api.openai.com/v1';
 
+/** Host the API key is sent to. A saved key may only go to the host it was entered for (see POST /settings/ai). */
+export function aiHost(provider: string, baseUrl: string): string | null {
+  if (provider === 'gemini') return 'generativelanguage.googleapis.com';
+  if (provider === 'anthropic') return 'api.anthropic.com';
+  try {
+    const u = new URL(baseUrl || DEFAULT_OPENAI_BASE);
+    return u.protocol === 'https:' && !u.username && !u.password ? u.host.toLowerCase() : null;
+  } catch {
+    return null;
+  }
+}
+
 // ---------- Page extraction: zod (authoritative) + JSON schema (sent to the model) ----------
 export const PageItem = z.object({
   question_text: z.string().trim().min(1),

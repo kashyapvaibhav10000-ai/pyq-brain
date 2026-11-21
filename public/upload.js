@@ -1,7 +1,7 @@
 // PYQ Brain upload: resize images / render PDF pages client-side, then POST one page per request.
 (() => {
   const MAX_EDGE = 1600, QUALITY = 0.7;
-  const PDFJS = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@6.5.438/build/';
+  const PDFJS = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@6.5.438/build/'; // version also in CSP (src/index.tsx PDFJS_SRC)
   const form = document.getElementById('up');
   if (!form) return;
   const $ = (id) => document.getElementById(id);

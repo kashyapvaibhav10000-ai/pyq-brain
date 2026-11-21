@@ -89,6 +89,10 @@ const PIN_SCRIPT =
   "var o=['/','/review','/priority','/settings'],r=function(u){u=new URL(u).pathname;var m=u.match(/BP50(\\d)T/);return o.findIndex(function(p){return p==='/'?u==='/':u.indexOf(p)===0})*10+(m?+m[1]:0)};" +
   "var back=n.navigationType==='traverse'?n.entry.index<n.from.index:r(n.entry.url)<r(n.from.url);if(back)t.types.add('back')});";
 
+const PRINT_SCRIPT = "document.getElementById('print-btn').onclick=function(){print()}";
+/** Every inline <script> body. The CSP (index.tsx) allows exactly these, by hash; add any new inline script here. */
+export const INLINE_SCRIPTS = [PIN_SCRIPT, SW_SCRIPT, PRINT_SCRIPT];
+
 /** Small notebook doodle for the brand (decoration, hidden from screen readers). */
 const Notebook = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
@@ -760,9 +764,10 @@ export function PriorityPage(props: { syllabus: Syllabus; code: string; groups: 
 export function PrintPage(props: { syllabus: Syllabus; code: string; groups: GroupRow[] }) {
   return (
     <Layout title={`Priority ${props.code}`} bare print>
-      <button class="noprint" onclick="print()">
+      <button class="noprint" id="print-btn">
         Print / Save PDF
       </button>
+      <script dangerouslySetInnerHTML={{ __html: PRINT_SCRIPT }} />
       <h1>
         {props.code} {props.syllabus[props.code]?.name} — PYQ priority
       </h1>
